@@ -39,22 +39,6 @@ public class RecordAnnotationInspector extends NopAnnotationIntrospector {
         return true;
     }
     
-//    @Override
-//    public Value findInjectableValue(AnnotatedMember m) {
-//        if (Record.class.isAssignableFrom(m.getDeclaringClass())) { 
-//            String name = null;
-//            if (m instanceof AnnotatedMethod am) {
-//                name = getMethodName(am);
-//            } else if (m instanceof AnnotatedParameter ap) {
-//                name = getParameterName(ap);
-//            }
-//            if (name != null) {
-//                return Value.forId(name);
-//            }
-//        }
-//        return null;
-//    }
-    
     @Override
     public PropertyName findNameForDeserialization(Annotated a) {
         return findPropertyName(a);
